@@ -1,0 +1,42 @@
+:root {
+  --color-primary: #082F36;
+  --color-secondary: #102D46;
+  --color-deep-jade: #15534E;
+  --color-petrol: #1E5260;
+  --color-sage: #9BC9B3;
+  --color-sea-glass: #C8E1DB;
+  --color-ivory: #F4F7F2;
+  --color-white: #FFFFFF;
+
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-accent: "DM Serif Display", Georgia, serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  --container: min(1180px, calc(100% - 3rem));
+  --container-wide: min(1400px, calc(100% - 2rem));
+
+  --header-h: 5rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  --z-header: 100;
+  --z-nav: 200;
+  --z-modal: 300;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container: min(100%, calc(100% - 2rem));
+    --header-h: 4.25rem;
+  }
+}

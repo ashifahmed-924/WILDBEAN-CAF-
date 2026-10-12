@@ -1,0 +1,139 @@
+.footer {
+  position: relative;
+  background: var(--color-primary);
+  color: var(--color-ivory);
+  padding: clamp(2rem, 4vw, 2.75rem) 0 1.25rem;
+  overflow: hidden;
+}
+
+.outline {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(244, 247, 242, 0.07);
+  line-height: 0.85;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.brand {
+  min-width: 0;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.cafe {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--color-sage);
+  letter-spacing: 0.12em;
+  margin-top: 0.2rem;
+}
+
+.social {
+  margin-top: 0.85rem;
+}
+
+.cta {
+  padding: 0.7rem 1.15rem;
+  min-height: 42px;
+  flex-shrink: 0;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(200, 225, 219, 0.15);
+}
+
+.cols ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+}
+
+.cols a {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  transition: color 0.3s ease;
+}
+
+.cols a:hover {
+  color: var(--color-sage);
+}
+
+.visit {
+  font-size: 0.9rem;
+  color: var(--color-sea-glass);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  align-items: baseline;
+}
+
+.visit a {
+  font-weight: 700;
+  color: var(--color-ivory);
+}
+
+.visit a:hover {
+  color: var(--color-sage);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  flex-wrap: wrap;
+  padding-top: 0.9rem;
+  font-size: 0.78rem;
+  color: rgba(244, 247, 242, 0.6);
+}
+
+.top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-sage);
+}
+
+@media (max-width: 640px) {
+  .topRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

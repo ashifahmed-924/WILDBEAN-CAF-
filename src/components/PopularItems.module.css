@@ -1,0 +1,120 @@
+.section {
+  padding: clamp(4.5rem, 9vw, 7rem) 0;
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.picksHeading {
+  margin-bottom: 0;
+}
+
+.picksHeading :global(h2) {
+  line-height: 0.88;
+  display: flex;
+  flex-direction: column;
+  gap: 0.08em;
+  white-space: normal;
+  max-width: none;
+}
+
+.linePrimary {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.lineAccent {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  color: var(--color-sage);
+  font-size: clamp(1.85rem, 5.5vw, 0.92em);
+}
+
+.viewport {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  will-change: transform;
+}
+
+.card {
+  flex: 0 0 clamp(280px, 32vw, 420px);
+  min-width: 0;
+}
+
+.card button {
+  width: 100%;
+  text-align: left;
+}
+
+.imageWrap {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+  pointer-events: none;
+}
+
+.card button:hover img {
+  transform: scale(1.04);
+}
+
+.meta h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.35rem;
+  padding-inline: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.meta p {
+  color: var(--color-sea-glass);
+  font-size: 0.92rem;
+  margin-bottom: 0.4rem;
+  padding-inline: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.meta :global(.price-tag) {
+  padding-inline: clamp(0.75rem, 2vw, 1.25rem);
+  display: inline-block;
+}
+
+.cta {
+  margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .card {
+    flex-basis: 78vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viewport {
+    overflow-x: auto;
+  }
+
+  .track {
+    transform: none !important;
+  }
+}

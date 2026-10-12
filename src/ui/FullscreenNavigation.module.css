@@ -1,0 +1,75 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-nav);
+  background: linear-gradient(145deg, var(--color-primary), var(--color-secondary) 55%, var(--color-deep-jade));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(2rem, 6vw, 5rem);
+  gap: 2rem;
+  clip-path: circle(0% at 92% 8%);
+}
+
+.close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(244, 247, 242, 0.35);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--color-ivory);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.close:hover {
+  background: rgba(244, 247, 242, 0.1);
+  border-color: var(--color-sage);
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.nav a {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.35s var(--ease-out);
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--color-sage);
+  transform: translateX(12px);
+}
+
+.preview {
+  width: min(38vw, 420px);
+  aspect-ratio: 3 / 4;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  opacity: 0.85;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  background-image: url("/images/hero/hero-coffee.jpg");
+  transition: background-image 0.4s ease;
+}
+
+@media (max-width: 900px) {
+  .preview {
+    display: none;
+  }
+
+  .overlay {
+    justify-content: center;
+  }
+}

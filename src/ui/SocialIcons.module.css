@@ -1,0 +1,28 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.list a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(244, 247, 242, 0.28);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--color-ivory);
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.list a:hover,
+.list a:focus-visible {
+  border-color: var(--color-sage);
+  color: var(--color-sage);
+  background: rgba(155, 201, 179, 0.08);
+}
+
+.list svg {
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,102 @@
+.section {
+  padding: clamp(4.5rem, 9vw, 7rem) 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.headingCol > * {
+  margin-bottom: 0;
+}
+
+.reviewCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.quote {
+  border: 1px solid rgba(200, 225, 219, 0.22);
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  background: rgba(8, 47, 54, 0.22);
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mark {
+  display: block;
+  font-family: var(--font-accent);
+  font-size: clamp(3.5rem, 8vw, 5rem);
+  line-height: 0.55;
+  color: var(--color-sage);
+  margin-bottom: 1.25rem;
+}
+
+.quote p {
+  color: var(--color-sea-glass);
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.quote footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ivory);
+}
+
+.quote cite {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.controls button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 247, 242, 0.3);
+  display: grid;
+  place-items: center;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.controls button:hover {
+  border-color: var(--color-sage);
+  color: var(--color-sage);
+}
+
+.controls span {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--color-sea-glass);
+}
+
+.note {
+  font-size: 0.85rem;
+  color: rgba(244, 247, 242, 0.65);
+  max-width: 42ch;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}

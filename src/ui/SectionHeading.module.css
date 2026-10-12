@@ -1,0 +1,60 @@
+.heading {
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 1rem;
+}
+
+.light .eyebrow {
+  color: var(--color-petrol);
+}
+
+.title {
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  white-space: pre-line;
+  max-width: 22ch;
+  line-height: 0.92;
+}
+
+.title :global([data-keep-row]) {
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(1.7rem, 6.8vw + 0.4rem, 1em);
+}
+
+.center .title {
+  margin-inline: auto;
+}
+
+.accent {
+  display: block;
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.55em;
+  letter-spacing: 0;
+  margin-top: 0.35em;
+  color: var(--color-sage);
+}
+
+.light .accent {
+  color: var(--color-deep-jade);
+}
+
+.light .title {
+  color: var(--color-primary);
+}

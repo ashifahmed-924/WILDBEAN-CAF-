@@ -1,0 +1,122 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: rgba(8, 47, 54, 0.7);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.panel {
+  width: min(640px, 100%);
+  height: 100%;
+  background: var(--color-primary);
+  border-left: 1px solid rgba(200, 225, 219, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid rgba(200, 225, 219, 0.12);
+}
+
+.eyebrow {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--color-sage);
+  margin-bottom: 0.4rem;
+}
+
+.header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.header button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 247, 242, 0.25);
+  display: grid;
+  place-items: center;
+}
+
+.body {
+  overflow: auto;
+  padding: 1.25rem 1.5rem 2rem;
+  flex: 1;
+}
+
+.group + .group {
+  margin-top: 2rem;
+}
+
+.group h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--color-sea-glass);
+}
+
+.group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.group li button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 0.85rem;
+  align-items: center;
+  text-align: left;
+  padding: 0.55rem;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.group li button:hover {
+  border-color: rgba(155, 201, 179, 0.35);
+  background: rgba(16, 45, 70, 0.45);
+}
+
+.group img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.group strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.group em {
+  display: block;
+  font-style: normal;
+  font-size: 0.85rem;
+  color: rgba(244, 247, 242, 0.65);
+  margin-top: 0.2rem;
+}
+
+.footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid rgba(200, 225, 219, 0.12);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: var(--color-sea-glass);
+  max-width: 28ch;
+}
